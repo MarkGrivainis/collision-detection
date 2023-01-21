@@ -1,3 +1,3 @@
 # collision-detection
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/typescript-ezd291)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/github/MarkGrivainis/collision-detection)
