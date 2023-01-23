@@ -65,5 +65,9 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: "src/assets", to: "assets" }],
     }),
+    new ESLintPlugin({
+        extensions: ['.tsx', '.ts', '.js'],
+        exclude: 'node_modules'
+     })
   ],
 };
