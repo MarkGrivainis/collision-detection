@@ -1,4 +1,4 @@
-import Mat3 from './mat3';
+import Mat3 from '../src/math/mat3';
 
 describe("matrix multiplication", () => {
     test("zero matrix", () => {
