@@ -68,8 +68,6 @@ export class Mat3 {
     this.values[8] *= scaler;
   }
   multiply(matrix: Mat3): void {
-    // c_ij = sum k=1 -> n a_ik b_kj
-
     const a11 = this.values[0],
       a12 = this.values[1],
       a13 = this.values[2];
@@ -89,8 +87,17 @@ export class Mat3 {
     const b31 = matrix.values[6],
       b32 = matrix.values[7],
       b33 = matrix.values[8];
-
+    // c_ij = sum k=1 -> n a_ik b_kj
     this.values[0] = a11 * b11 + a12 * b21 + a13 * b31;
-    this.values[1] = a11 * b12 + a12;
+    this.values[1] = a11 * b12 + a12 * b22 + a13 * b32;
+    this.values[2] = a11 * b13 + a12 * b23 + a13 * b33;
+
+    this.values[3] = a21 * b11 + a22 * b21 + a23 * b31;
+    this.values[4] = a21 * b12 + a22 * b22 + a23 * b32;
+    this.values[5] = a21 * b13 + a22 * b23 + a23 * b33;
+
+    this.values[6] = a31 * b11 + a32 * b21 + a33 * b31;
+    this.values[7] = a31 * b12 + a32 * b22 + a33 * b32;
+    this.values[8] = a31 * b13 + a32 * b23 + a33 * b33;
   }
 }
